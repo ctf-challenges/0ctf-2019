@@ -1,0 +1,9 @@
+flask
+pandas
+keras
+tensorflow
+numpy
+flask-bootstrap
+matplotlib
+IPython
+pillow

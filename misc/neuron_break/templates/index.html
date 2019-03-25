@@ -1,0 +1,48 @@
+{% extends "bootstrap/base.html" %}
+ 
+{% block title %}Neuron Break{% endblock %}
+ 
+{% block navbar %}
+<div class="navbar navbar-inverse" role="navigation">
+    <div class="container">
+        <div class="navbar-collapse collapse">
+            <ul class="nav navbar-nav">
+                <h1>Neuron Break!!!!</h1>
+            </ul>
+        </div>
+    </div>
+</div>
+{% endblock %}
+
+{% block content %}
+
+<div class="container">
+	 <h1>
+Neuron Break!!!! 
+</h1>
+<h1>
+Today we will cheat machine learning models, let's fool ML to make wrong predictions
+</h1>
+    <img src="{{ url_for('static',filename='0.jpg', _t=time_val) }}" width="20%">
+    <img src="{{ url_for('static',filename='1.jpg', _t=time_val) }}" width="20%">
+    <img src="{{ url_for('static',filename='2.jpg', _t=time_val) }}" width="20%">
+    <img src="{{ url_for('static',filename='3.jpg', _t=time_val) }}" width="20%">
+    <img src="{{ url_for('static',filename='4.jpg', _t=time_val) }}" width="20%">
+    <img src="{{ url_for('static',filename='5.jpg', _t=time_val) }}" width="20%">
+    <img src="{{ url_for('static',filename='6.jpg', _t=time_val) }}" width="20%">
+    <img src="{{ url_for('static',filename='7.jpg', _t=time_val) }}" width="20%">
+
+    <div class="page-header">
+        <form id="form" method="post" action="/" enctype="multipart/form-data" value="SELECT">
+            <input id="file" type="file" name="file" value="zipfile"/>
+            <input type="submit" name="submit" value="upload" />
+        </form>
+    </div>
+{% if name %}
+  <h1> result :{{ name }}!</h1>
+{% else %}
+  <h1> result :</h1>
+{% endif %}
+</div>
+{% endblock %}
+
